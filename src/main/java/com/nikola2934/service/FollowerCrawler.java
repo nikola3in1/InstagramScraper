@@ -1,22 +1,22 @@
 package com.nikola2934.service;
 
-
 import com.nikola2934.model.entities.Crawler;
+import com.nikola2934.model.entities.Follower;
 import com.nikola2934.model.entities.TargetAccount;
-import com.nikola2934.model.json.Cookie;
 import com.nikola2934.model.json.Cookies;
+import com.nikola2934.service.util.QueryHashes;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.util.UriBuilder;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import java.net.URI;
 import java.util.Objects;
 
-public class FollowerCrawler extends Thread{
+public class FollowerCrawler extends Thread {
     /*
     -----------BOUNDARIES-----------
      * 200 requests per hour...
@@ -69,21 +69,26 @@ public class FollowerCrawler extends Thread{
     private HttpHeaders cookieHeaders = new HttpHeaders();
     //default: 24, max:50
 
-    //Settings
+    //Settings params
+    private boolean initCrawl = false;
     private Integer followersPerRequest = 50;
     private Integer requestsPerAccount = 2;
     private Integer numberOfAccounts;
 
-    //Results
+    //Results?
+
+    public FollowerCrawler(TargetAccount target, boolean initCrawl) {
+        this.target = target;
+        this.initCrawl = initCrawl;
+    }
 
     @Override
     public void run() {
         try {
-            for (int i = 0; i < 10; i++) {
-                Crawler c = CrawlerRotationService.getCrawler();
-                if (c != null) {
-                    fetchSessionCookie(c);
-                }
+            if (initCrawl) {
+                initialCrawl();
+            } else {
+                process();
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -91,35 +96,92 @@ public class FollowerCrawler extends Thread{
     }
 
     void process() throws Exception {
-        //
-        Crawler crawler = CrawlerRotationService.getCrawler();
-        if (crawler != null) {
-            fetchSessionCookie(crawler);
-        }
+        prepareCrawler();
+        //cycle
+        //for(i){}
+        scrapeFollowers();
+    }
 
+    void initialCrawl() throws Exception {
+        prepareCrawler();
+        scrapeFirstCursor();
+    }
+
+//    private String scrapeFirstCursor() {
+//        RestTemplate restTemplate = new RestTemplate();
+//        HttpEntity<String> requestEntity = new HttpEntity<>("", cookieHeaders);
+//
+//        System.out.println(requestEntity.getHeaders()+" <==headers");
+//        ResponseEntity<String> result = restTemplate.exchange(getUrl(), HttpMethod.GET, requestEntity, String.class);
+//        System.out.println(result.getHeaders());
+//        System.out.println(result.toString());
+//        return result.toString();
+//    }
+
+
+    ///TESTING, FIXING
+    private String scrapeFirstCursor() {
+        RestTemplate restTemplate = new RestTemplate();
+
+        String url = "https://www.instagram.com/graphql/query/?query_hash=56066f031e6239f35a904ac20c9f37d9&variables={\"id\":\"19410587\",\"include_reel\":true,\"fetch_mutual\":true,\"first\":24}";
+        ResponseEntity<String> result = restTemplate.getForEntity(url, String.class);
+        System.out.println(result.getHeaders());
+        System.out.println(result.toString());
+        return result.toString();
+    }
+
+    private void scrapeFollowers() {
+        RestTemplate restTemplate = new RestTemplate();
+        HttpEntity<String> requestEntity = new HttpEntity<>(null, cookieHeaders);
+        ResponseEntity<String> result = restTemplate.exchange(getUrl(), HttpMethod.GET, requestEntity, String.class);
+        System.out.println(result);
     }
 
     private void fetchSessionCookie(Crawler crawler) throws Exception {
         RestTemplate restTemplate = new RestTemplate();
-        final String url = COOKIE_SERVICE_URL+"cookie";
+        final String url = COOKIE_SERVICE_URL + "cookie";
         UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(url)
                 .queryParam("username", crawler.getUsername())
                 .queryParam("password", crawler.getPassword());
 
-        ResponseEntity<Cookies> response = restTemplate.getForEntity(builder.toUriString(),Cookies.class);
-        if (Objects.requireNonNull(response.getBody()).getCookie()!=null) {
+        System.out.println(builder.toUriString()+ "<<< uri string");
+        ResponseEntity<Cookies> response = restTemplate.getForEntity(builder.toUriString(), Cookies.class);
+        if (Objects.requireNonNull(response.getBody()).getCookie() != null) {
             //Setting cookie
             System.out.println("Cookie fetched" + response.getBody().getCookie().toString());
-            cookieHeaders.add("Cookie",response.getBody().getCookie().toString());
-        }else{
+            cookieHeaders.add("Cookie", response.getBody().getCookie().toString());
+        } else {
             System.out.println("Failed fetching cookie");
             throw new Exception("NoCookieException");
         }
     }
 
-    private void scrapeFollowers() {
+    void prepareCrawler() throws Exception {
+        System.out.print("Preparing crawler account...");
+        Crawler crawler = CrawlerRotationService.getCrawler();
+        //Fetching crawler account,
+        //if not available atm, wait
+        while (crawler == null) {
+            crawler = CrawlerRotationService.getCrawler();
+            System.out.println(crawler.getUsername());
+        }
+        fetchSessionCookie(crawler);
+        System.out.println("done!");
     }
 
+    //Util
+    private String getUrl() {
+        if (initCrawl)
+            return "https://www.instagram.com/graphql/query/?query_hash=" + getFollowersQueryHash() + "&variables=%7B%22id%22%3A%22" +
+                    target.getId() + "%22%2C%22include_reel%22%3Atrue%2C%22fetch_mutual%22%3Atrue%2C%22first%22%3A"+24+"%7D";
 
+        return "https://www.instagram.com/graphql/query/?query_hash=" + getFollowersQueryHash() + "&variables=%7B%22id%22%3A%22" +
+                target.getId() + "%22%2C%22include_reel%22%3Atrue%2C%22fetch_mutual%22%3Afalse%2C%22first%22%3A" +
+                followersPerRequest + "%2C%22after%22%3A%22" + target.getLastCursor() + "%3D%3D%22%7D";
+    }
+
+    private String getFollowersQueryHash() {
+        return QueryHashes.queries.get("GetFollowers");
+    }
 
 }

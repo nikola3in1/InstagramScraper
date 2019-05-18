@@ -6,7 +6,7 @@ import com.nikola2934.model.entities.Follower;
 import com.nikola2934.model.entities.TargetAccount;
 
 import com.nikola2934.service.CrawlerRotationService;
-import com.nikola2934.service.CrawlingWorker;
+import com.nikola2934.service.FollowerCrawler;
 import org.slf4j.LoggerFactory;
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.Logger;
@@ -26,32 +26,33 @@ public class Main {
         Logger root = (Logger) LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
         root.setLevel(Level.ERROR);
         CrawlerRotationService crawlerRotationService = new CrawlerRotationService(Db.getInstace().read(Crawler.class));
+        crawlerRotationService.start();
     }
 
     private Main() {
-        CrawlingWorker worker = new CrawlingWorker();
-        worker.start();
-
+        TargetAccount target = new TargetAccount("19410587", "kingjames", "", "", new HashSet<Follower>());
+        FollowerCrawler crawler = new FollowerCrawler(target, true);
+        crawler.run();
     }
 
-    void addCrawlers() {
-        Crawler crawler = new Crawler("johnwhitegrey", "John2White", new Date(System.currentTimeMillis()));
-        Crawler crawler1 = new Crawler("jennygreengrey", "Jenny2Green", new Date(System.currentTimeMillis()));
-        Crawler crawler2 = new Crawler("johnjonhxster", "123testiramo321", new Date(System.currentTimeMillis()));
-        Crawler crawler3 = new Crawler("imkekul", "cloudisgood1", new Date(System.currentTimeMillis()));
-        Crawler crawler4 = new Crawler("dusanekecmane", "tridvajedan0", new Date(System.currentTimeMillis()));
-        List<Crawler> crawlerList = new ArrayList<>();
-        crawlerList.add(crawler);
-        crawlerList.add(crawler1);
-        crawlerList.add(crawler2);
-        crawlerList.add(crawler3);
-        crawlerList.add(crawler4);
-
-        for (Crawler c : crawlerList) {
-            Db.getInstace().save(c);
-        }
-
-    }
+//    void addCrawlers() {
+//        Crawler crawler = new Crawler("johnwhitegrey", "John2White", new Date(System.currentTimeMillis()));
+//        Crawler crawler1 = new Crawler("jennygreengrey", "Jenny2Green", new Date(System.currentTimeMillis()));
+//        Crawler crawler2 = new Crawler("johnjonhxster", "123testiramo321", new Date(System.currentTimeMillis()));
+//        Crawler crawler3 = new Crawler("imkekul", "cloudisgood1", new Date(System.currentTimeMillis()));
+//        Crawler crawler4 = new Crawler("dusanekecmane", "tridvajedan0", new Date(System.currentTimeMillis()));
+//        List<Crawler> crawlerList = new ArrayList<>();
+//        crawlerList.add(crawler);
+//        crawlerList.add(crawler1);
+//        crawlerList.add(crawler2);
+//        crawlerList.add(crawler3);
+//        crawlerList.add(crawler4);
+//
+//        for (Crawler c : crawlerList) {
+//            Db.getInstace().save(c);
+//        }
+//
+//    }
 
     void dbTest() {
         Follower follower = new Follower("asd", "sad", "asd", false, false,

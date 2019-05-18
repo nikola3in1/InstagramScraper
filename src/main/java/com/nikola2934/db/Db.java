@@ -45,6 +45,7 @@ public class Db <T extends Model>{
             ssObj.getTransaction().commit();
             System.out.println("\n\n.......Records Saved Successfully To The Database.......\n\n");
         } catch (Exception sqlException) {
+            sqlException.printStackTrace();
             if (null != ssObj.getTransaction()) {
                 System.out.println("\n.......Transaction Is Being Rolled Back.......");
                 ssObj.getTransaction().rollback();
@@ -58,6 +59,7 @@ public class Db <T extends Model>{
     }
 
     public HashSet<T> read(Class type){
+        //Gets objects from db by given type
         HashSet<T> targets = new HashSet<>();
         try {
             ssObj = buildSessionFactory().openSession();
