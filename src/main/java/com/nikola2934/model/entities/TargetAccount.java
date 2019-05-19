@@ -38,6 +38,10 @@ public class TargetAccount extends Model implements Serializable{
         this.followers = followers;
     }
 
+    public void addFollower(Follower follower) {
+        this.getFollowers().add(follower);
+    }
+
     public String getId() {
         return user_id;
     }

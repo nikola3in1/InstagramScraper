@@ -13,7 +13,6 @@ import ch.qos.logback.classic.Logger;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
-import java.sql.Date;
 import java.util.*;
 
 public class Main {
@@ -31,7 +30,7 @@ public class Main {
 
     private Main() {
         TargetAccount target = new TargetAccount("19410587", "kingjames", "", "", new HashSet<Follower>());
-        FollowerCrawler crawler = new FollowerCrawler(target, true);
+        FollowerCrawler crawler = new FollowerCrawler(target);
         crawler.run();
     }
 

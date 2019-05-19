@@ -3,9 +3,9 @@
 //import com.google.gson.Gson;
 //import com.google.gson.GsonBuilder;
 //import com.nikola2934.model.entities.Follower;
-//import com.nikola2934.model.json.Cookie;
-//import com.nikola2934.model.json.Cookies;
-//import com.nikola2934.model.json.Json;
+//import com.nikola2934.service.json.Cookie;
+//import com.nikola2934.service.json.Cookies;
+//import com.nikola2934.service.Json;
 //
 //import java.io.BufferedReader;
 //import java.io.IOException;

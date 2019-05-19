@@ -2,19 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be75a37a-af6e-47ae-9d94-ee254cc27fca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/target/classes/com/nikola2934/service/FollowerCrawler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nikola2934/service/Json.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nikola2934/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nikola2934/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nikola2934/db/Db.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nikola2934/db/Db.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nikola2934/model/entities/TargetAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nikola2934/model/entities/TargetAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nikola2934/model/json/Cookie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nikola2934/model/json/Cookies.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nikola2934/model/json/Json.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nikola2934/service/CrawlerRotationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nikola2934/service/CrawlerRotationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nikola2934/service/FollowerCrawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nikola2934/service/FollowerCrawler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nikola2934/service/FollowerFetcherOld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nikola2934/service/FollowerFetcherOld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nikola2934/service/util/QueryHashes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nikola2934/service/util/QueryHashes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/nikola2934/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nikola2934/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nikola2934/db/Db.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nikola2934/db/Db.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nikola2934/service/CrawlingWorker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nikola2934/service/util/QueryHashes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nikola2934/service/util/QueryHashes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nikola2934/model/entities/TargetAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nikola2934/model/entities/TargetAccount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nikola2934/model/json/Cookie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nikola2934/model/json/Cookies.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nikola2934/model/json/Json$Data$User$FollowedBy$NextCursor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nikola2934/model/json/Json$Data$User$FollowedBy$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nikola2934/model/json/Json$Data$User$FollowedBy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nikola2934/model/json/Json$Data$User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nikola2934/model/json/Json$Data.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nikola2934/model/json/Json.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nikola2934/service/FollowerCrawler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nikola2934/service/FollowerCrawler.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,95 +40,45 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/service/FollowerCrawler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="121" column="22" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="22" />
-              <folding>
-                <element signature="e#682#2021#0" />
-                <element signature="method#FollowerCrawler#0;class#FollowerCrawler#0" />
-                <element signature="method#run#0;class#FollowerCrawler#0" />
-                <element signature="e#2328#2362#0" />
-                <element signature="e#2600#2644#1" />
-                <element signature="e#2651#2693#1" />
-                <element signature="e#2383#2427#0" />
-                <element signature="method#process#0;class#FollowerCrawler#0" />
-                <element signature="e#2848#2855#0" />
-                <element signature="method#initialCrawl#0;class#FollowerCrawler#0" />
-                <element signature="method#scrapeFollowers#0;class#FollowerCrawler#0" />
-                <element signature="e#3762#3885#1" />
-                <element signature="method#prepareCrawler#0;class#FollowerCrawler#0" />
-                <element signature="e#4531#4558#0" />
-                <element signature="e#4628#4698#1" />
-                <element signature="method#getUrl#0;class#FollowerCrawler#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/model/json/Cookies.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-              <folding>
-                <element signature="e#192#193#0" expanded="true" />
-                <element signature="e#221#222#0" expanded="true" />
-                <element signature="e#265#266#0" expanded="true" />
-                <element signature="e#301#302#0" expanded="true" />
-                <element signature="e#335#336#0" expanded="true" />
-                <element signature="e#365#366#0" expanded="true" />
-                <element signature="e#411#412#0" expanded="true" />
-                <element signature="e#449#450#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/model/json/Cookie.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-              <folding>
-                <element signature="e#240#241#0" expanded="true" />
-                <element signature="e#267#268#0" expanded="true" />
-                <element signature="e#307#308#0" expanded="true" />
-                <element signature="e#339#340#0" expanded="true" />
-                <element signature="e#371#372#0" expanded="true" />
-                <element signature="e#399#400#0" expanded="true" />
-                <element signature="e#441#442#0" expanded="true" />
-                <element signature="e#475#476#0" expanded="true" />
-                <element signature="e#509#510#0" expanded="true" />
-                <element signature="e#539#540#0" expanded="true" />
-                <element signature="e#585#586#0" expanded="true" />
-                <element signature="e#623#624#0" expanded="true" />
-                <element signature="e#656#657#0" expanded="true" />
-                <element signature="e#685#686#0" expanded="true" />
-                <element signature="e#729#730#0" expanded="true" />
-                <element signature="e#765#766#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/service/FollowerFetcherOld.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2061">
-              <caret line="229" column="61" lean-forward="true" selection-start-line="229" selection-start-column="61" selection-end-line="229" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/db/Db.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="43" column="30" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
+            <state relative-caret-position="245">
+              <caret line="127" column="5" lean-forward="true" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#567#568#0" expanded="true" />
-                <element signature="e#597#598#0" expanded="true" />
+                <element signature="e#706#2045#0" />
+                <element signature="method#FollowerCrawler#1;class#FollowerCrawler#0" />
+                <element signature="e#2818#2934#0" />
+                <element signature="e#2864#2885#0" />
+                <element signature="e#2918#2954#0" />
+                <element signature="e#2975#3306#0" />
+                <element signature="e#3081#3247#1" />
+                <element signature="e#3312#4150#0" />
+                <element signature="e#5292#6561#0" />
+                <element signature="e#6093#6152#1" />
+                <element signature="e#7243#7287#0" />
+                <element signature="e#5703#5730#0" />
+                <element signature="e#5800#5925#1" />
+                <element signature="e#5124#5992#0" />
+                <element signature="e#5694#5857#1" />
+                <element signature="e#5863#5986#1" />
+                <element signature="method#getUrl#0;class#FollowerCrawler#0" />
+                <element signature="e#10086#10149#1" />
+                <element signature="e#6241#7271#0" />
+                <element signature="e#6264#6751#0" />
+                <element signature="e#6757#7269#0" />
+                <element signature="e#6921#7160#0" />
+                <element signature="e#7096#7150#1" />
+                <element signature="e#7183#7227#0" />
+                <element signature="e#7509#7527#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/service/Json.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -128,25 +86,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-638">
-              <caret line="32" column="6" lean-forward="true" selection-start-line="32" selection-start-column="6" selection-end-line="34" selection-end-column="22" />
+            <state relative-caret-position="51">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#dbTest#0;class#Main#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/service/CrawlerRotationService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="25" column="75" selection-start-line="25" selection-start-column="75" selection-end-line="25" selection-end-column="75" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#629#630#0" expanded="true" />
-                <element signature="e#698#699#0" expanded="true" />
+                <element signature="e#615#616#0" expanded="true" />
+                <element signature="e#641#642#0" expanded="true" />
+                <element signature="e#2135#2897#0" />
               </folding>
             </state>
           </provider>
@@ -163,16 +108,21 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sessionidCookie</find>
       <find>:</find>
       <find>poll</find>
       <find>CrawlerManager.</find>
       <find>timeoutPeriod</find>
       <find>cookieHeaders</find>
       <find>19410587</find>
-      <find>prepare</find>
       <find>sessionid</find>
       <find>pre</find>
+      <find>sessionid=13591012342%3AL6qF1SPMuUXuBV%3A22; Domain=.instagram.com; expires=1589772979.111289; Path=/; Secure</find>
+      <find>sessionid=13591012342%3AVi69jCDQcY4sl3%3A1; Domain=.instagram.com; expires=1589773189.811785; Path=/; Secure</find>
+      <find>session</find>
+      <find>Cookie</find>
+      <find>sessionidCookie</find>
+      <find>prepare</find>
+      <find>craw</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -184,7 +134,6 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/service/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/model/json/FollowerFetcher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/model/json/Json.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/service/FollowerFetcher.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/model/json/Cookies.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/model/json/Cookie.java" />
@@ -195,7 +144,6 @@
         <option value="$PROJECT_DIR$/instaLogin/accounts.json" />
         <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/service/CrawlerManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/service/CrawlerWorker.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/service/CrawlerRotationService.java" />
         <option value="$PROJECT_DIR$/instaLogin/app.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/service/CrawlingWorker.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/service/FollowersCrawler.java" />
@@ -203,8 +151,19 @@
         <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/service/util/QueryHashes.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/db/Db.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/model/entities/Crawler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/service/FollowerFetcherOld.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/TestController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/model/json/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/model/json/NextCursor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/model/json/Node.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/model/json/Json.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/service/json/Cookies.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/service/json/Cookie.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/model/entities/TargetAccount.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/service/Json.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/service/FollowerScraper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/service/CrawlerRotationService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nikola2934/service/FollowerCrawler.java" />
       </list>
     </option>
@@ -220,7 +179,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -262,45 +220,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="nikola2934" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InstagramScraper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InstagramScraper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="nikola2934" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InstagramScraper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InstagramScraper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="nikola2934" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InstagramScraper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InstagramScraper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="nikola2934" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InstagramScraper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InstagramScraper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="nikola2934" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="InstagramScraper" type="b2602c69:ProjectViewProjectNode" />
@@ -313,6 +233,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -322,6 +243,7 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/simonida/IT355-ispit" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -380,12 +302,13 @@
       <workItem from="1555885507986" duration="44000" />
       <workItem from="1557966020504" duration="1456000" />
       <workItem from="1558109116823" duration="885000" />
-      <workItem from="1558143739257" duration="8089000" />
+      <workItem from="1558143739257" duration="8113000" />
+      <workItem from="1558231307566" duration="14246000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34462000" />
+    <option name="totallyTimeSpent" value="48732000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -398,9 +321,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1000" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49598163" visible="true" weight="0.18249734" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49598163" visible="true" weight="0.18463181" />
       <window_info id="Structure" order="1" sideWeight="0.50401837" side_tool="true" weight="0.18249734" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -409,20 +331,20 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3298969" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.47990814" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39977092" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.16151203" />
-      <window_info anchor="bottom" id="Spring" order="7" weight="0.3298969" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3295063" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3295063" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.3298969" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295063" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.39977092" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="5" weight="0.16151203" />
+      <window_info anchor="bottom" id="Spring" order="6" weight="0.3298969" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3295063" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3295063" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3298969" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" x="724" y="159" width="1042" height="654" id="Run" order="14" weight="0.2835821" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -497,13 +419,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/model/json/Follower.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/service/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/model/json/Json.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/service/util/Settings.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/db/CrawlerDAO.java" />
     <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/Thread.class">
@@ -560,16 +475,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/model/entities/TargetAccount.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/model/entities/Crawler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+        <state relative-caret-position="17">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/db/Db.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="561">
           <caret line="43" column="30" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -579,70 +494,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/model/entities/Crawler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/TestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/model/json/Cookies.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding>
-            <element signature="e#192#193#0" expanded="true" />
-            <element signature="e#221#222#0" expanded="true" />
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#301#302#0" expanded="true" />
-            <element signature="e#335#336#0" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#411#412#0" expanded="true" />
-            <element signature="e#449#450#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/model/json/Cookie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding>
-            <element signature="e#240#241#0" expanded="true" />
-            <element signature="e#267#268#0" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#339#340#0" expanded="true" />
-            <element signature="e#371#372#0" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
-            <element signature="e#441#442#0" expanded="true" />
-            <element signature="e#475#476#0" expanded="true" />
-            <element signature="e#509#510#0" expanded="true" />
-            <element signature="e#539#540#0" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#623#624#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#685#686#0" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#765#766#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-638">
-          <caret line="32" column="6" lean-forward="true" selection-start-line="32" selection-start-column="6" selection-end-line="34" selection-end-column="22" />
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#dbTest#0;class#Main#0" />
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#387#388#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/model/json/Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/model/json/FollowedBy.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/model/json/NextCursor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/model/json/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/model/json/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/service/json/Cookie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/service/json/Cookies.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/model/entities/TargetAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+          <folding>
+            <element signature="e#1209#1210#0" expanded="true" />
+            <element signature="e#1228#1229#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/service/FollowerFetcherOld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="161" selection-start-line="161" selection-end-line="162" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/service/Json.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/service/CrawlerRotationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="25" column="75" selection-start-line="25" selection-start-column="75" selection-end-line="25" selection-end-column="75" />
+        <state relative-caret-position="782">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#629#630#0" expanded="true" />
@@ -651,34 +588,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/service/FollowerFetcherOld.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2061">
-          <caret line="229" column="61" lean-forward="true" selection-start-line="229" selection-start-column="61" selection-end-line="229" selection-end-column="61" />
+        <state relative-caret-position="51">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#615#616#0" expanded="true" />
+            <element signature="e#641#642#0" expanded="true" />
+            <element signature="e#2135#2897#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nikola2934/service/FollowerCrawler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="121" column="22" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="22" />
+        <state relative-caret-position="245">
+          <caret line="127" column="5" lean-forward="true" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
           <folding>
-            <element signature="e#682#2021#0" />
-            <element signature="method#FollowerCrawler#0;class#FollowerCrawler#0" />
-            <element signature="method#run#0;class#FollowerCrawler#0" />
-            <element signature="e#2328#2362#0" />
-            <element signature="e#2600#2644#1" />
-            <element signature="e#2651#2693#1" />
-            <element signature="e#2383#2427#0" />
-            <element signature="method#process#0;class#FollowerCrawler#0" />
-            <element signature="e#2848#2855#0" />
-            <element signature="method#initialCrawl#0;class#FollowerCrawler#0" />
-            <element signature="method#scrapeFollowers#0;class#FollowerCrawler#0" />
-            <element signature="e#3762#3885#1" />
-            <element signature="method#prepareCrawler#0;class#FollowerCrawler#0" />
-            <element signature="e#4531#4558#0" />
-            <element signature="e#4628#4698#1" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#706#2045#0" />
+            <element signature="method#FollowerCrawler#1;class#FollowerCrawler#0" />
+            <element signature="e#2818#2934#0" />
+            <element signature="e#2864#2885#0" />
+            <element signature="e#2918#2954#0" />
+            <element signature="e#2975#3306#0" />
+            <element signature="e#3081#3247#1" />
+            <element signature="e#3312#4150#0" />
+            <element signature="e#5292#6561#0" />
+            <element signature="e#6093#6152#1" />
+            <element signature="e#7243#7287#0" />
+            <element signature="e#5703#5730#0" />
+            <element signature="e#5800#5925#1" />
+            <element signature="e#5124#5992#0" />
+            <element signature="e#5694#5857#1" />
+            <element signature="e#5863#5986#1" />
             <element signature="method#getUrl#0;class#FollowerCrawler#0" />
+            <element signature="e#10086#10149#1" />
+            <element signature="e#6241#7271#0" />
+            <element signature="e#6264#6751#0" />
+            <element signature="e#6757#7269#0" />
+            <element signature="e#6921#7160#0" />
+            <element signature="e#7096#7150#1" />
+            <element signature="e#7183#7227#0" />
+            <element signature="e#7509#7527#0" />
           </folding>
         </state>
       </provider>

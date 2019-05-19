@@ -49,7 +49,6 @@ public class CrawlerRotationService extends Thread {
         if (!availableCrawlers.isEmpty()) {
             Crawler ready = availableCrawlers.poll();
             busyCrawlers.put(System.currentTimeMillis() + 200 + timeoutPeriod, ready);
-            System.out.println(ready.getUsername() + " size: " + availableCrawlers.size());
             return ready;
         }
         System.out.println("No available crawlers...");
